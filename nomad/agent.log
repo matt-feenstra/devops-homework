@@ -1,0 +1,54 @@
+==> No configuration files loaded
+==> Starting Nomad agent...
+==> Nomad agent configuration:
+
+       Advertise Addrs: HTTP: 10.7.7.50:4646; RPC: 10.7.7.50:4647; Serf: 10.7.7.50:4648
+            Bind Addrs: HTTP: 0.0.0.0:4646; RPC: 0.0.0.0:4647; Serf: 0.0.0.0:4648
+                Client: true
+             Log Level: INFO
+                Region: global (DC: dc1)
+                Server: true
+               Version: 1.1.4
+
+==> Nomad agent started! Log data will stream in below:
+
+    2021-09-17T17:36:11.291-0700 [INFO]  agent: detected plugin: name=raw_exec type=driver plugin_version=0.1.0
+    2021-09-17T17:36:11.291-0700 [INFO]  agent: detected plugin: name=exec type=driver plugin_version=0.1.0
+    2021-09-17T17:36:11.291-0700 [INFO]  agent: detected plugin: name=qemu type=driver plugin_version=0.1.0
+    2021-09-17T17:36:11.291-0700 [INFO]  agent: detected plugin: name=java type=driver plugin_version=0.1.0
+    2021-09-17T17:36:11.291-0700 [INFO]  agent: detected plugin: name=docker type=driver plugin_version=0.1.0
+    2021-09-17T17:36:11.291-0700 [INFO]  agent: detected plugin: name=nvidia-gpu type=device plugin_version=0.1.0
+    2021-09-17T17:36:11.294-0700 [INFO]  nomad.raft: initial configuration: index=1 servers="[{Suffrage:Voter ID:10.7.7.50:4647 Address:10.7.7.50:4647}]"
+    2021-09-17T17:36:11.294-0700 [INFO]  nomad.raft: entering follower state: follower="Node at 10.7.7.50:4647 [Follower]" leader=
+    2021-09-17T17:36:11.295-0700 [INFO]  nomad: serf: EventMemberJoin: appdev.global 10.7.7.50
+    2021-09-17T17:36:11.295-0700 [INFO]  nomad: starting scheduling worker(s): num_workers=8 schedulers=[service, batch, system, _core]
+    2021-09-17T17:36:11.295-0700 [INFO]  nomad: adding server: server="appdev.global (Addr: 10.7.7.50:4647) (DC: dc1)"
+    2021-09-17T17:36:11.296-0700 [INFO]  client: using state directory: state_dir=/tmp/NomadClient888526232
+    2021-09-17T17:36:11.296-0700 [INFO]  client: using alloc directory: alloc_dir=/tmp/NomadClient065413655
+    2021-09-17T17:36:11.307-0700 [INFO]  client.cpuset_manager: initialized cpuset cgroup manager: parent=/nomad cpuset=0-7
+    2021-09-17T17:36:11.311-0700 [INFO]  client.fingerprint_mgr.cgroup: cgroups are available
+    2021-09-17T17:36:11.316-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=lo
+    2021-09-17T17:36:11.318-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=lo
+    2021-09-17T17:36:11.320-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=enp1s0
+    2021-09-17T17:36:11.322-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=virbr0
+    2021-09-17T17:36:11.324-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=docker0
+    2021-09-17T17:36:13.147-0700 [WARN]  nomad.raft: heartbeat timeout reached, starting election: last-leader=
+    2021-09-17T17:36:13.147-0700 [INFO]  nomad.raft: entering candidate state: node="Node at 10.7.7.50:4647 [Candidate]" term=2
+    2021-09-17T17:36:13.147-0700 [INFO]  nomad.raft: election won: tally=1
+    2021-09-17T17:36:13.147-0700 [INFO]  nomad.raft: entering leader state: leader="Node at 10.7.7.50:4647 [Leader]"
+    2021-09-17T17:36:13.147-0700 [INFO]  nomad: cluster leadership acquired
+    2021-09-17T17:36:13.149-0700 [INFO]  nomad.core: established cluster id: cluster_id=dcf68cb2-e865-fc36-c7e7-35669fea9a27 create_time=1631925373149489283
+    2021-09-17T17:36:19.330-0700 [INFO]  client.plugin: starting plugin manager: plugin-type=csi
+    2021-09-17T17:36:19.331-0700 [INFO]  client.plugin: starting plugin manager: plugin-type=driver
+    2021-09-17T17:36:19.331-0700 [INFO]  client.plugin: starting plugin manager: plugin-type=device
+    2021-09-17T17:36:19.428-0700 [INFO]  client: started client: node_id=c9556732-c6dc-d2c4-af4b-45b5231b9fa0
+    2021-09-17T17:36:19.430-0700 [INFO]  client: node registration complete
+    2021-09-17T17:36:20.432-0700 [INFO]  client: node registration complete
+    2021-09-17T17:50:46.041-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=80a2626e-109f-9167-985f-2bea801107d1 task=task_service_b @module=logmon path=/tmp/NomadClient065413655/80a2626e-109f-9167-985f-2bea801107d1/alloc/logs/.task_service_b.stdout.fifo timestamp=2021-09-17T17:50:46.041-0700
+    2021-09-17T17:50:46.041-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=80a2626e-109f-9167-985f-2bea801107d1 task=task_service_b @module=logmon path=/tmp/NomadClient065413655/80a2626e-109f-9167-985f-2bea801107d1/alloc/logs/.task_service_b.stderr.fifo timestamp=2021-09-17T17:50:46.041-0700
+    2021-09-17T17:50:46.049-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=b3653d04-6a4e-e007-48c3-af1dbc69425b task=task_service_a @module=logmon path=/tmp/NomadClient065413655/b3653d04-6a4e-e007-48c3-af1dbc69425b/alloc/logs/.task_service_a.stdout.fifo timestamp=2021-09-17T17:50:46.044-0700
+    2021-09-17T17:50:46.049-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=b3653d04-6a4e-e007-48c3-af1dbc69425b task=task_service_a @module=logmon path=/tmp/NomadClient065413655/b3653d04-6a4e-e007-48c3-af1dbc69425b/alloc/logs/.task_service_a.stderr.fifo timestamp=2021-09-17T17:50:46.044-0700
+    2021-09-17T17:50:46.218-0700 [INFO]  client.driver_mgr.docker: created container: driver=docker container_id=bc76cbe933d7f1e9b4c801ccbf72b3e45562f9122f00186606b111cf94b863ca
+    2021-09-17T17:50:46.233-0700 [INFO]  client.driver_mgr.docker: created container: driver=docker container_id=e087dc7a4204a4a4db0ca3814274ab6735721c18b47c2bfd70e2743d482529b0
+    2021-09-17T17:50:46.949-0700 [INFO]  client.driver_mgr.docker: started container: driver=docker container_id=bc76cbe933d7f1e9b4c801ccbf72b3e45562f9122f00186606b111cf94b863ca
+    2021-09-17T17:50:47.142-0700 [INFO]  client.driver_mgr.docker: started container: driver=docker container_id=e087dc7a4204a4a4db0ca3814274ab6735721c18b47c2bfd70e2743d482529b0

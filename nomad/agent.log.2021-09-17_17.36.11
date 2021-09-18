@@ -1,0 +1,65 @@
+==> No configuration files loaded
+==> Starting Nomad agent...
+==> Nomad agent configuration:
+
+       Advertise Addrs: HTTP: 10.7.7.50:4646; RPC: 10.7.7.50:4647; Serf: 10.7.7.50:4648
+            Bind Addrs: HTTP: 0.0.0.0:4646; RPC: 0.0.0.0:4647; Serf: 0.0.0.0:4648
+                Client: true
+             Log Level: INFO
+                Region: global (DC: dc1)
+                Server: true
+               Version: 1.1.4
+
+==> Nomad agent started! Log data will stream in below:
+
+    2021-09-17T16:57:43.588-0700 [INFO]  agent: detected plugin: name=nvidia-gpu type=device plugin_version=0.1.0
+    2021-09-17T16:57:43.588-0700 [INFO]  agent: detected plugin: name=raw_exec type=driver plugin_version=0.1.0
+    2021-09-17T16:57:43.588-0700 [INFO]  agent: detected plugin: name=exec type=driver plugin_version=0.1.0
+    2021-09-17T16:57:43.588-0700 [INFO]  agent: detected plugin: name=qemu type=driver plugin_version=0.1.0
+    2021-09-17T16:57:43.588-0700 [INFO]  agent: detected plugin: name=java type=driver plugin_version=0.1.0
+    2021-09-17T16:57:43.588-0700 [INFO]  agent: detected plugin: name=docker type=driver plugin_version=0.1.0
+    2021-09-17T16:57:43.592-0700 [INFO]  nomad.raft: initial configuration: index=1 servers="[{Suffrage:Voter ID:10.7.7.50:4647 Address:10.7.7.50:4647}]"
+    2021-09-17T16:57:43.593-0700 [INFO]  nomad.raft: entering follower state: follower="Node at 10.7.7.50:4647 [Follower]" leader=
+    2021-09-17T16:57:43.593-0700 [INFO]  nomad: serf: EventMemberJoin: appdev.global 10.7.7.50
+    2021-09-17T16:57:43.594-0700 [INFO]  nomad: starting scheduling worker(s): num_workers=8 schedulers=[service, batch, system, _core]
+    2021-09-17T16:57:43.594-0700 [INFO]  nomad: adding server: server="appdev.global (Addr: 10.7.7.50:4647) (DC: dc1)"
+    2021-09-17T16:57:43.594-0700 [INFO]  client: using state directory: state_dir=/tmp/NomadClient116478056
+    2021-09-17T16:57:43.595-0700 [INFO]  client: using alloc directory: alloc_dir=/tmp/NomadClient279426727
+    2021-09-17T16:57:43.603-0700 [INFO]  client.cpuset_manager: initialized cpuset cgroup manager: parent=/nomad cpuset=0-7
+    2021-09-17T16:57:43.607-0700 [INFO]  client.fingerprint_mgr.cgroup: cgroups are available
+    2021-09-17T16:57:43.614-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=lo
+    2021-09-17T16:57:43.616-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=lo
+    2021-09-17T16:57:43.618-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=enp1s0
+    2021-09-17T16:57:43.620-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=virbr0
+    2021-09-17T16:57:43.623-0700 [WARN]  client.fingerprint_mgr.network: unable to parse speed: path=/sbin/ethtool device=docker0
+    2021-09-17T16:57:44.621-0700 [WARN]  nomad.raft: heartbeat timeout reached, starting election: last-leader=
+    2021-09-17T16:57:44.621-0700 [INFO]  nomad.raft: entering candidate state: node="Node at 10.7.7.50:4647 [Candidate]" term=2
+    2021-09-17T16:57:44.621-0700 [INFO]  nomad.raft: election won: tally=1
+    2021-09-17T16:57:44.621-0700 [INFO]  nomad.raft: entering leader state: leader="Node at 10.7.7.50:4647 [Leader]"
+    2021-09-17T16:57:44.621-0700 [INFO]  nomad: cluster leadership acquired
+    2021-09-17T16:57:44.623-0700 [INFO]  nomad.core: established cluster id: cluster_id=e4a0e381-1cf1-5b41-a0c7-6037a79cae55 create_time=1631923064623334698
+    2021-09-17T16:57:51.629-0700 [INFO]  client.plugin: starting plugin manager: plugin-type=csi
+    2021-09-17T16:57:51.629-0700 [INFO]  client.plugin: starting plugin manager: plugin-type=driver
+    2021-09-17T16:57:51.629-0700 [INFO]  client.plugin: starting plugin manager: plugin-type=device
+    2021-09-17T16:57:51.721-0700 [INFO]  client: started client: node_id=8e94a51c-c011-3cd6-0342-83928a7d23f9
+    2021-09-17T16:57:51.726-0700 [INFO]  client: node registration complete
+    2021-09-17T16:57:52.728-0700 [INFO]  client: node registration complete
+    2021-09-17T17:02:20.469-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=e5554612-08ae-939a-b6ec-3f97a1859a87 task=task_service_a path=/tmp/NomadClient279426727/e5554612-08ae-939a-b6ec-3f97a1859a87/alloc/logs/.task_service_a.stdout.fifo @module=logmon timestamp=2021-09-17T17:02:20.469-0700
+    2021-09-17T17:02:20.470-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=e5554612-08ae-939a-b6ec-3f97a1859a87 task=task_service_a @module=logmon path=/tmp/NomadClient279426727/e5554612-08ae-939a-b6ec-3f97a1859a87/alloc/logs/.task_service_a.stderr.fifo timestamp=2021-09-17T17:02:20.469-0700
+    2021-09-17T17:02:20.471-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=e5554612-08ae-939a-b6ec-3f97a1859a87 task=task_service_b path=/tmp/NomadClient279426727/e5554612-08ae-939a-b6ec-3f97a1859a87/alloc/logs/.task_service_b.stdout.fifo @module=logmon timestamp=2021-09-17T17:02:20.471-0700
+    2021-09-17T17:02:20.471-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=e5554612-08ae-939a-b6ec-3f97a1859a87 task=task_service_b @module=logmon path=/tmp/NomadClient279426727/e5554612-08ae-939a-b6ec-3f97a1859a87/alloc/logs/.task_service_b.stderr.fifo timestamp=2021-09-17T17:02:20.471-0700
+    2021-09-17T17:02:20.475-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=d8d3e914-4b1c-002f-6994-cdb6aa047230 task=task_service_b @module=logmon path=/tmp/NomadClient279426727/d8d3e914-4b1c-002f-6994-cdb6aa047230/alloc/logs/.task_service_b.stdout.fifo timestamp=2021-09-17T17:02:20.475-0700
+    2021-09-17T17:02:20.476-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=d8d3e914-4b1c-002f-6994-cdb6aa047230 task=task_service_b path=/tmp/NomadClient279426727/d8d3e914-4b1c-002f-6994-cdb6aa047230/alloc/logs/.task_service_b.stderr.fifo @module=logmon timestamp=2021-09-17T17:02:20.476-0700
+    2021-09-17T17:02:20.478-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=d8d3e914-4b1c-002f-6994-cdb6aa047230 task=task_service_a @module=logmon path=/tmp/NomadClient279426727/d8d3e914-4b1c-002f-6994-cdb6aa047230/alloc/logs/.task_service_a.stdout.fifo timestamp=2021-09-17T17:02:20.477-0700
+    2021-09-17T17:02:20.478-0700 [INFO]  client.alloc_runner.task_runner.task_hook.logmon.nomad: opening fifo: alloc_id=d8d3e914-4b1c-002f-6994-cdb6aa047230 task=task_service_a @module=logmon path=/tmp/NomadClient279426727/d8d3e914-4b1c-002f-6994-cdb6aa047230/alloc/logs/.task_service_a.stderr.fifo timestamp=2021-09-17T17:02:20.478-0700
+    2021-09-17T17:02:20.601-0700 [INFO]  client.driver_mgr.docker: created container: driver=docker container_id=9190b913ab1ddf38356079fe4c9914c3c8472a7e8fac725d73ae81ea8a5fc6d0
+    2021-09-17T17:02:20.608-0700 [INFO]  client.driver_mgr.docker: created container: driver=docker container_id=4614232920c599caf5743ad7b10e2cddbc7b8a339c30c39df7219c979e3e2902
+    2021-09-17T17:02:20.616-0700 [INFO]  client.driver_mgr.docker: created container: driver=docker container_id=b1932958608eb0c8a8291f785d72dbc1995e3cf3630234860f412da4a522af9d
+    2021-09-17T17:02:20.621-0700 [INFO]  client.driver_mgr.docker: created container: driver=docker container_id=9ee990270ace72e7b2813bfd1f14adc0e8afe76c0fdcefcd77dbf840a1c2638f
+    2021-09-17T17:02:21.502-0700 [INFO]  client.driver_mgr.docker: started container: driver=docker container_id=9190b913ab1ddf38356079fe4c9914c3c8472a7e8fac725d73ae81ea8a5fc6d0
+    2021-09-17T17:02:21.708-0700 [INFO]  client.driver_mgr.docker: started container: driver=docker container_id=b1932958608eb0c8a8291f785d72dbc1995e3cf3630234860f412da4a522af9d
+    2021-09-17T17:02:22.066-0700 [INFO]  client.driver_mgr.docker: started container: driver=docker container_id=9ee990270ace72e7b2813bfd1f14adc0e8afe76c0fdcefcd77dbf840a1c2638f
+    2021-09-17T17:02:22.153-0700 [INFO]  client.driver_mgr.docker: started container: driver=docker container_id=4614232920c599caf5743ad7b10e2cddbc7b8a339c30c39df7219c979e3e2902
+==> Caught signal: terminated
+    2021-09-17T17:33:06.807-0700 [INFO]  agent: requesting shutdown
+    2021-09-17T17:33:06.807-0700 [INFO]  client: shutting down
